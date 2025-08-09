@@ -10,11 +10,11 @@ public class DictionaryClient extends AbstractClient {
 
     @Override
     public void handleMessageFromServer(Object msg) {
-        System.out.println(msg);  // Hiển thị định nghĩa từ nhận được từ server
+        System.out.println(msg);  
     }
 
     public static void main(String[] args) {
-        String host = "localhost"; // Server host
+        String host = "localhost"; 
         int port = 12345; // Server port
         
         DictionaryClient client = new DictionaryClient(host, port);
@@ -33,10 +33,10 @@ public class DictionaryClient extends AbstractClient {
                 if (word.equalsIgnoreCase("exit")) {
                     break;
                 }
-                client.sendToServer(word); // Gửi từ cần tra cứu tới server
+                client.sendToServer(word); 
             }
             
-            client.closeConnection(); // Đóng kết nối khi kết thúc
+            client.closeConnection(); 
         } catch (Exception e) {
             e.printStackTrace();
         }
