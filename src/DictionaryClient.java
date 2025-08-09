@@ -15,15 +15,15 @@ public class DictionaryClient extends AbstractClient {
 
     public static void main(String[] args) {
         String host = "localhost"; 
-        int port = 12345; // Server port
+        int port = 12345; 
         
         DictionaryClient client = new DictionaryClient(host, port);
         
         try {
-            client.openConnection(); // Mở kết nối đến server
+            client.openConnection(); 
             System.out.println("Connected to server at " + host + ":" + port);
             
-            // Đọc từ cần tra cứu từ bàn phím và gửi tới server
+           
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             String word;
             
