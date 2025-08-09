@@ -20,7 +20,7 @@ public class DictionaryServer extends AbstractServer {
 
     @Override
     public void handleMessageFromClient(Object msg, ConnectionToClient client) {
-        String word = (String) msg;  // Lấy từ cần tra cứu từ client
+        String word = (String) msg; 
         String definition = dictionary.getOrDefault(word.toLowerCase(), "Word not found in dictionary.");
         
         try {
@@ -31,11 +31,11 @@ public class DictionaryServer extends AbstractServer {
     }
 
     public static void main(String[] args) {
-        int port = 12345; // Cổng mà server sẽ lắng nghe
+        int port = 12345; 
         DictionaryServer server = new DictionaryServer(port);
         
         try {
-            server.listen(); // Bắt đầu lắng nghe kết nối
+            server.listen(); 
             System.out.println("Dictionary Server started on port " + port);
         } catch (IOException e) {
             e.printStackTrace();
